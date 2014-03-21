@@ -20,7 +20,7 @@ DAEMON=/usr/local/bin/phantomjs-1.9.7/$NAME
 DAEMON_ARGS="--webdriver=4444 --webdriver-logfile=/var/log/phantomjs.log"
 PIDFILE=/var/run/$NAME.pid
 SCRIPTNAME=/etc/init.d/$NAME
-VER
+VERBOSE=yes
 
 # Exit if the package is not installed
 [ -x "$DAEMON" ] || exit 0
@@ -29,7 +29,7 @@ VER
 [ -r /etc/default/$NAME ] && . /etc/default/$NAME
 
 # Load the VERBOSE setting and other rcS variables
-. /lib/init/vars.sh
+#. /lib/init/vars.sh
 
 # Define LSB log_* functions.
 # Depend on lsb-base (>= 3.2-14) to ensure that this file is present
